@@ -6,6 +6,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Home from './Pages/Home/Home';
+import PurchagePage from './Pages/Home/PurchagePage';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
@@ -15,6 +16,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="purchase/:id" element={<PurchagePage></PurchagePage>}></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path="review" element={<MyOrders></MyOrders>}></Route>

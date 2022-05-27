@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "name": "Phanteks",
+        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
+        "email":"saklainm71@gmail.com"
+    },
+    {
+        "id":2,
+        "name": "Phanteks",
+        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
+        "email":"saklainm71@gmail.com"
+    },
+    {
+        "id":3,
+        "name": "Phanteks",
+        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
+        "email":"saklainm71@gmail.com"
+    }
+    
+]
