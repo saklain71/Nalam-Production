@@ -7,7 +7,6 @@ import Review from './Review';
 const Home = () => {
     return (
         <div>
-            <h1 className='text-amber-600'>Home page</h1>
             <Banner></Banner>
             <Products></Products>
             <BusinessSummery></BusinessSummery>

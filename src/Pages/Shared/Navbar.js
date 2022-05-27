@@ -22,7 +22,7 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Nalam-Tools</a>
+                <a className="btn btn-ghost normal-case text-xl">Nalam Production</a>
             </div>
             <div className="navbar-center hidden lg:flex">
 
