@@ -3,13 +3,15 @@ import Products from './Products';
 
 const ProductsSection = () => {
     const [product, setProducts] = useState([])
+
+
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/products')
             .then((res) => res.json())
             .then((data) => setProducts(data))
     }, [])
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 sm:grid-cols-2'>
              {
                 
                 product.map(products => <Products

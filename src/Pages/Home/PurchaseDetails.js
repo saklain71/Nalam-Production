@@ -1,10 +1,12 @@
 import React from 'react';
 
 const PurchaseDetails = ({products}) => {
-  //  const {img, name, description, minOrderQuantity, availableQuantity, price} = products;
+    console.log(products);
+    //const {img, name, description, minOrderQuantity, availableQuantity, price} = products;
     return (
         <div>
-            {/* <div className="card w-96 bg-base-100 shadow-xl ">
+            
+            <div className="card w-96 bg-base-100 shadow-xl ">
                         <figure className="px-10 pt-10">
                             <img src={products.img} alt="Shoes" className="rounded-xl h-28" />
                         </figure>
@@ -15,7 +17,7 @@ const PurchaseDetails = ({products}) => {
                             <p><b> Available Quantity : </b>{products.availableQuantity}</p>
                             <p>{products.description}</p>
                         </div>
-                    </div> */}
+                    </div>
         </div>
     );
 };

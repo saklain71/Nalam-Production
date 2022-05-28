@@ -37,10 +37,10 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-3xl">
+                <Link to="/" className="btn btn-ghost normal-case text-3xl">
                     N<span className='text-red-300'>alam</span>
                     P<span className='text-red-300'>roduction</span>
-                </a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
 
