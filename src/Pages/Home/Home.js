@@ -3,7 +3,7 @@ import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
 
 import ProductsSection from './ProductsSection';
-import Review from './Review';
+import ReviewSection from './ReviewSection';
 
 const Home = () => {
 
@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <ProductsSection></ProductsSection>
             <BusinessSummery></BusinessSummery>
-            <Review></Review>
+            <ReviewSection></ReviewSection>
         </div>
     );
 };

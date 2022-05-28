@@ -22,7 +22,10 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Nalam Production</a>
+                <a className="btn btn-ghost normal-case text-3xl">
+                    N<span className='text-red-300'>alam</span>
+                    P<span className='text-red-300'>roduction</span>
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
 

@@ -1,33 +1,62 @@
 [
     {
-        "id":1,
+        "id": 1,
         "name": "Phanteks",
-        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "description": "P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
         "minOrderQuantity": 50,
         "availableQuantity": 500,
         "price": 500,
-        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
-        "email":"saklainm71@gmail.com"
+        "img": "https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
+        "email": "saklainm71@gmail.com"
     },
     {
-        "id":2,
-        "name": "Phanteks",
-        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "id": 2,
+        "name": "Cooling System",
+        "description": "Impressively high cooling performance,Doubly decoupled pump for quiet operation and minimal vibration", 
         "minOrderQuantity": 50,
         "availableQuantity": 500,
         "price": 500,
-        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
-        "email":"saklainm71@gmail.com"
+        "img": "https://m.media-amazon.com/images/I/71WjiKDEGyL._AC_SL1500_.jpg",
+        "email": "saklainm71@gmail.com"
     },
     {
-        "id":3,
-        "name": "Phanteks",
-        "description":"P500A high Airflow Full-Metal mesh Design, ATX Mid-Tower, Digital-RGB Lighting, 140mm D-RGB case Fans, Tempered Glass",
+        "id": 3,
+        "name": "Capable",
+        "description": "Monoprice Braided DisplayPort 1.4 Cable - 10 Feet - Gray, 8K Capable for Graphic Design, TV Walls and PC Gaming",
         "minOrderQuantity": 50,
         "availableQuantity": 500,
         "price": 500,
-        "img":"https://m.media-amazon.com/images/I/81Fm0tOuzsL._AC_SL1500_.jpg",
-        "email":"saklainm71@gmail.com"
+        "img": "https://m.media-amazon.com/images/I/51SVPUEvmKL._AC_SL1000_.jpg",
+        "email": "saklainm71@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Dual Monitor Stand",
+        "description": "Dual-arm monitor stand frees up desktop space; each arm can hold an LCD monitor up to 20 pounds",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img": "https://m.media-amazon.com/images/I/71-vVgPmt6L._AC_SL1500_.jpg",
+        "email": "saklainm71@gmail.com"
+    },
+    {
+        "id": 5,
+        "name": "Computer Monitor Riser Desk Stand",
+        "description": "Monitor stand with column-style stackable legs to choose your height Adjustable height up to 4-7/8 inches",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img": "https://m.media-amazon.com/images/I/91xyjRFQZGS._AC_SL1500_.jpg",
+        "email": "saklainm71@gmail.com"
+    },
+    {
+        "id": 6,
+        "name": "Coupler",
+        "description": "HDMI Coupler 2 Pack 4K HDMI Adapter Female to Female HDMI Connector 3D 4K HDMI Extender Compatible with HDTV Roku TV Stick Chromecast Nintendo Switch",
+        "minOrderQuantity": 50,
+        "availableQuantity": 500,
+        "price": 500,
+        "img": "https://m.media-amazon.com/images/I/619WQ0gWsHL._AC_SL1500_.jpg",
+        "email": "saklainm71@gmail.com"
     }
-    
 ]
