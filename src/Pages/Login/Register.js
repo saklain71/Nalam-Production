@@ -1,34 +1,40 @@
 import React, { useEffect } from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import login from '../../Images/login.jpg'
 import google from '../../Images/google.png'
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import Loading from '../Shared/Loading';
-import { toast } from 'react-toastify';
 //import UseToken from '../Hooks/UseToken';
-const Login = () => {
+import Loading from '../Shared/Loading';
+
+const Register = () => {
+
     const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
 
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [updateProfile, updating] = useUpdateProfile(auth);
+
+    //const [token] = UseToken(user || guser)
 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-  //  const [token] = UseToken(user || guser)
-    console.log(guser)
-    const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password)
+    const onSubmit = async data => {
+        await createUserWithEmailAndPassword(data.email, data.password)
+        await updateProfile({ displayName: data.name, })
     };
+    console.log(user)
     useEffect(() => {
         if (gerror || error) {
             toast.error(error?.message || gerror?.message, {
@@ -37,34 +43,47 @@ const Login = () => {
         }
     }, [error, gerror])
 
-    if(user || guser){
+    if (user || guser) {
         navigate(from, { replace: true })
     }
-
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true })
-    //     }
-    // }, [token, navigate, from])
+    // if (token) {
+    //     navigate(from, { replace: true })
+    // }
 
 
-    if (loading || gloading) {
+    if (loading || gloading || updating) {
         return <Loading></Loading>
     }
 
-
     return (
-        <div className='sm:flex-row-reverse lg:flex '>
-           <img className='w-96' src={login} alt="" />
+        <div className='flex'>
+            <img src={login} alt="" />
             <div className='w-full border-4 '>
-                <h1 className="text-3xl text-center text-info mt-4">Log In</h1>
+                <h1 className="text-3xl text-center text-info mt-4">Register</h1>
+                <form onSubmit={handleSubmit(onSubmit)} className="mx-24 my-6">
 
-                <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
-                    <div class="form-control w-full mb-6">
+                    <div class="form-control w-full my-6">
+                        <input
+                            {...register("name", {
+                                required: {
+                                    value: true,
+                                    message: "Name is Required"
+                                }
+
+                            })}
+                            type="text"
+                            placeholder="Your email"
+                            class="input input-bordered "
+                        />
+                        {errors.name?.type === 'required' && <span class="label-text-alt text-red-600 mt-4">{errors.name?.message}</span>}
+
+                    </div>
+
+                    <div class="form-control w-full my-6">
                         <input
                             {...register("email", {
                                 pattern: {
-                                    value: "",
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                                     message: "Invalid email"
                                 },
                                 required: {
@@ -78,8 +97,10 @@ const Login = () => {
                             class="input input-bordered "
                         />
                         {errors.email?.type === 'required' && <span class="label-text-alt text-red-600 mt-4">{errors.email?.message}</span>}
+                        {errors.email?.type === 'pattern' && <span class="label-text-alt text-red-600 mt-4">{errors.email?.message}</span>}
 
                     </div>
+
                     <div class="form-control w-full">
                         <input
                             {...register("password", {
@@ -95,22 +116,23 @@ const Login = () => {
                             })}
                             type="password"
                             placeholder="Your password"
-                            class="input input-bordered w-full "
+                            class="input input-bordered w-full mb-4"
                         />
                         {errors.password?.type === 'required' && <span class="label-text-alt text-red-600 my-4">{errors.password?.message}</span>}
                         {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-600 my-4">{errors.password?.message}</span>}
                     </div>
-                    <button className='btn btn-info w-full text-white mt-4' type="submit" value="LogIn">LogIn</button>
+
+
+                    <button className='btn btn-info w-full text-white' type="submit" value="LogIn">Register</button>
                 </form>
                 <div className='text-center text-lg font-serif'>
-                    <span>Don't have any account? </span><Link className='text-info' to='/register'>Register</Link>
+                    <span>already have an account? </span><Link className='text-info' to='/login'> LogIn please</Link>
                 </div>
                 <div class="divider">OR</div>
-                <button className='btn btn-info lg:w-[344px] mx-12 lg:mx-24 my-4'
-                    onClick={() => signInWithGoogle()}><img className='w-12 h-12' src={google} alt="" /> Continue With Google</button>
+                <button className='btn btn-info w-[344px] mx-24 my-4' onClick={() => signInWithGoogle()}><img className='w-12 h-12' src={google} alt="" /> LogIN With google</button>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;

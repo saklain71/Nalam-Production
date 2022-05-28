@@ -9,6 +9,10 @@ import Home from './Pages/Home/Home';
 import PurchagePage from './Pages/Home/PurchagePage';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
+import { ToastContainer } from 'react-toastify';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Login/Register';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -23,8 +27,12 @@ function App() {
           <Route path="history" element={<AddReview></AddReview>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
