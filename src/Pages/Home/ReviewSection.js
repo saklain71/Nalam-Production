@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query'
-import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const ReviewSection = () => {
@@ -12,7 +10,11 @@ useEffect(()=>{
 },[])
    
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
+       <section>
+            <h1 className='text-info text-3xl'>Clients Reviews Here</h1>
+        
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mb-14'>
+            
             {
                 review.map(review => <Review
                 key={review._id}
@@ -21,6 +23,7 @@ useEffect(()=>{
                 </Review>)
             }   
         </div>
+       </section>
     );
 };
 
