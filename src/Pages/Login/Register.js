@@ -56,8 +56,8 @@ const Register = () => {
     }
 
     return (
-        <div className='flex'>
-            <img src={login} alt="" />
+        <div className='lg:flex'>
+            <img className='w-96' src={login} alt="" />
             <div className='w-full border-4 '>
                 <h1 className="text-3xl text-center text-info mt-4">Register</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="mx-24 my-6">
@@ -72,7 +72,7 @@ const Register = () => {
 
                             })}
                             type="text"
-                            placeholder="Your email"
+                            placeholder="Your name"
                             class="input input-bordered "
                         />
                         {errors.name?.type === 'required' && <span class="label-text-alt text-red-600 mt-4">{errors.name?.message}</span>}
