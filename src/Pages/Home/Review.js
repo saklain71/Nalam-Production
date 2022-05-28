@@ -7,7 +7,7 @@ const Review = ({review}) => {
             <div className="card-body">
                <div className=" items-center">
                     <div>
-                        <h4 className='text-xl'><b>{review.data.name}</b></h4>
+                        <h4 className='text-xl'><b>{review.name}</b></h4>
                         <p>Ratings:  *** </p>
                     </div>
                 </div>

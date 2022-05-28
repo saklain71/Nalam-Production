@@ -33,7 +33,7 @@ const ContactForm = () => {
                             </div>
                             <textarea  name="companyDetails" placeholder=' Write here about your Company Info' id="" cols="20" rows="5"></textarea>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary">Contact Us</button>
+                                <button class="btn btn-info">Contact Us</button>
                             </div>
                         </div>
                     </div>

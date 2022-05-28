@@ -13,7 +13,7 @@ useEffect(()=>{
        <section>
             <h1 className='text-info text-3xl'>Clients Reviews Here</h1>
         
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mb-14'>
+        <div className='grid grid-cols-1 sm: lg:grid-cols-3 gap-5 mb-14'>
             
             {
                 review.map(review => <Review
