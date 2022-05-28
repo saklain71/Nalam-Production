@@ -9,7 +9,7 @@ const ProductsSection = () => {
             .then((data) => setProducts(data))
     }, [])
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
              {
                 
                 product.map(products => <Products
