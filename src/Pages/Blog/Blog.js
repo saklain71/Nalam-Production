@@ -34,7 +34,7 @@ const Blog = () => {
                 <p className='text-lg font-mono text-left'>
                     suppose i have an array name user and it's includes object with a name property . if i have to find any property by name i will write this code <br />
 
-                    <span className='text-info'>user.map(u = > console.log(u.name.includes(searchquery)))</span>
+                    <span className='text-info'>user.map(u = console.log(u.name.includes(searchquery)))</span>
                 </p>
               
                 <h1 className='text-2xl font-serif my-4  font-bold'>What is a unit test?</h1>

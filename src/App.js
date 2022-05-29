@@ -18,6 +18,7 @@ import AllUsers from './Pages/Dashboard/AllUsers';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import Blog from './Pages/Blog/Blog';
 import About from './Pages/About/About';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 
 function App() {
@@ -41,8 +42,17 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path="orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
-          <Route path="alluser" element={<AllUsers></AllUsers>}></Route>
-          <Route path="manageOrder" element={<ManageOrders></ManageOrders>}></Route>
+          <Route path="alluser" element={
+            <RequireAdmin>
+              <AllUsers></AllUsers>
+            </RequireAdmin>
+          }>
+          </Route>
+          <Route path="manageOrder" element={
+            <RequireAdmin>
+              <ManageOrders></ManageOrders>
+            </RequireAdmin>
+          }></Route>
           <Route path="payment" element={<Payment></Payment>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>

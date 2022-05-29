@@ -16,7 +16,7 @@ const MyOrders = () => {
         <div>
             <h1 className='text-bold text-2xl m-5'>{user.displayName}'s  Orders </h1>
             <div >
-                <table class="table table-zebra w-full">
+                <table class="table table-zebra table-compact w-full">
 
                     <thead>
                         <tr>

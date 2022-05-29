@@ -7,7 +7,7 @@ const BusinessSummery = () => {
 
     return (
         <div style={{ backgroundImage: `url(${backImage})`, backgroundSize: 'cover' }}>
-            <h1 className='text-6xl text-info text-center font-serif my-16'>Business Summary</h1>
+            <h1 className='text-6xl text-info text-center font-mono my-16'>Business Summary</h1>
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 place-items-center'>
                 <div className='my-6 flex flex-col justify-center items-center'>
                     <GiFlyingFlag className='text-4xl  '></GiFlyingFlag>

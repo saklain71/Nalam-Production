@@ -12,7 +12,7 @@ const ManageOrders = () => {
         <div>
            
             <div >
-                <table class="table table-zebra w-full">
+                <table class="table table-zebra table-compact w-full">
 
                     <thead>
                         <tr>

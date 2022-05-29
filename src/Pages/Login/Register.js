@@ -25,7 +25,7 @@ const Register = () => {
 
     const [updateProfile, updating] = useUpdateProfile(auth);
 
-    const [token, tokenloading] = UseToken(user || guser)
+    const [token] = UseToken(user || guser)
 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -49,7 +49,7 @@ const Register = () => {
     }
 
 
-    if (loading || gloading || updating || tokenloading) {
+    if ( loading || gloading || updating ) {
         return <Loading></Loading>
     }
 
