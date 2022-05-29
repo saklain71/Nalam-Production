@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import login from '../../Images/login.jpg'
 import google from '../../Images/google.png'
-//import UseToken from '../Hooks/UseToken';
+import UseToken from '../../Hooks/UseToken';
 import Loading from '../Shared/Loading';
 
 const Register = () => {
@@ -25,7 +25,7 @@ const Register = () => {
 
     const [updateProfile, updating] = useUpdateProfile(auth);
 
-    //const [token] = UseToken(user || guser)
+    const [token, tokenloading] = UseToken(user || guser)
 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -43,15 +43,13 @@ const Register = () => {
         }
     }, [error, gerror])
 
-    if (user || guser) {
-        navigate(from, { replace: true })
+  
+    if (token) {
+        navigate(from, { replace: true });
     }
-    // if (token) {
-    //     navigate(from, { replace: true })
-    // }
 
 
-    if (loading || gloading || updating) {
+    if (loading || gloading || updating || tokenloading) {
         return <Loading></Loading>
     }
 

@@ -25,7 +25,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     const [token] = UseToken(user || guser)
-    console.log(guser)
+
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
     };
@@ -37,13 +37,15 @@ const Login = () => {
         }
     }, [error, gerror])
 
-   
+
 
     useEffect(() => {
+
         if (token) {
             navigate(from, { replace: true })
         }
     }, [token, navigate, from])
+
 
 
     if (loading || gloading) {
@@ -53,7 +55,7 @@ const Login = () => {
 
     return (
         <div className='sm:flex-row-reverse lg:flex '>
-           <img className='w-96' src={login} alt="" />
+            <img className='w-96' src={login} alt="" />
             <div className='w-full border-4 '>
                 <h1 className="text-3xl text-center text-info mt-4">Log In</h1>
 

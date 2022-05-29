@@ -51,7 +51,7 @@ const AddReview = () => {
                             />
                             <input
                                 type="number"
-                                placeholder="Give Ratings Out of 5"
+                                placeholder="Give pRatings Out of 5"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("ratings", {
                                     required: {

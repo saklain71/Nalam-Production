@@ -15,6 +15,7 @@ import Register from './Pages/Login/Register';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Payment from './Pages/Dashboard/Payment';
+import AllUsers from './Pages/Dashboard/AllUsers';
 
 
 function App() {
@@ -38,12 +39,12 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path="orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
+          <Route path="alluser" element={<AllUsers></AllUsers>}></Route>
           <Route path="payment" element={<Payment></Payment>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
-
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
