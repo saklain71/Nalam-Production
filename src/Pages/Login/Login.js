@@ -7,7 +7,7 @@ import google from '../../Images/google.png'
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../Shared/Loading';
 import { toast } from 'react-toastify';
-//import UseToken from '../Hooks/UseToken';
+import UseToken from '../../Hooks/UseToken';
 const Login = () => {
     const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -24,7 +24,7 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-  //  const [token] = UseToken(user || guser)
+    const [token] = UseToken(user || guser)
     console.log(guser)
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
@@ -37,15 +37,13 @@ const Login = () => {
         }
     }, [error, gerror])
 
-    if(user || guser){
-        navigate(from, { replace: true })
-    }
+   
 
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate(from, { replace: true })
-    //     }
-    // }, [token, navigate, from])
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true })
+        }
+    }, [token, navigate, from])
 
 
     if (loading || gloading) {

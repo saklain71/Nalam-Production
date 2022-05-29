@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const PurchagePage = () => {
-   
+
     const [user] = useAuthState(auth);
     const { register, handleSubmit, reset } = useForm();
 
@@ -17,9 +17,9 @@ const PurchagePage = () => {
     const { data: purchase, refetch } = useQuery("purchase", () => fetch(url).then(res => res.json()))
 
     const [quantityCount, setQuantityCount] = useState(10)
-    const [price, setPrice] = useState(1)
+    const [price, setPrice] = useState(0)
 
-   // console.log(quantityCount, price)
+    // console.log(quantityCount, price)
     const onSubmit = data => {
         const quantity = purchase?.availableQuantity - data.quantity
         const newQuantity = { quantity }
@@ -33,11 +33,8 @@ const PurchagePage = () => {
             body: JSON.stringify(order)
         }).then(res => res.json())
             .then(data => {
-                if (data.acknowledged) {
-                    toast.success("Your order successfully placed")
-                    reset()
-                }
-
+                toast.success("Order successfully taken")
+                reset()
             })
 
         const url = `http://localhost:5000/products/${id.id}`
@@ -72,6 +69,7 @@ const PurchagePage = () => {
 
 
                     </div>
+                    
 
 
 
@@ -159,15 +157,19 @@ const PurchagePage = () => {
                                         class="input input-bordered" required />
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button class="btn btn-info" type='submit' disabled={purchase?.availableQuantity < quantityCount || quantityCount < 10}>Place Order</button>
-
+                                    <button class="btn btn-info mb-5" type='submit' disabled={purchase?.availableQuantity < quantityCount || quantityCount < 10}>Place Order</button>
                                 </div>
 
+
+
                             </div>
+
                         </form>
+
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

@@ -11,7 +11,7 @@ useEffect(()=>{
    
     return (
        <section>
-            <h1 className='text-info text-3xl'>Clients Reviews Here</h1>
+            <h1 className='text-info text-5xl my-10'>Clients Reviews Here</h1>
         
         <div className='grid grid-cols-1 sm: lg:grid-cols-3 gap-5 mb-14'>
             

@@ -11,7 +11,7 @@ const Review = ({ review }) => {
                         <h4 className='text-xl'><b>{review.name}</b></h4>
 
                         <div className='flex justify-center items-center text-xl'>
-                        {review.ratings} <AiFillStar className='text-warning'></AiFillStar> 
+                             {review.ratings} <AiFillStar className='text-warning'></AiFillStar>
                         </div>
                     </div>
                 </div>
