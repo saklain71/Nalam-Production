@@ -5,7 +5,7 @@ const ModalCancel = ({ item, refetch }) =>  {
     const { _id } = item
 
     const handleCancel = () => {
-        const url = `http://localhost:5000/order/${_id}`
+        const url = `https://still-taiga-05914.herokuapp.com/order/${_id}`
         fetch(url, {
             method: "DELETE",
             headers: {

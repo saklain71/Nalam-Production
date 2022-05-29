@@ -5,7 +5,7 @@ import ModalCancel from './ModalCancel';
 const ManageOrders = () => {
 
   
-    const url = `http://localhost:5000/allorder`
+    const url = `https://still-taiga-05914.herokuapp.com/allorder`
     const { data: myorders, refetch } = useQuery("myorders", () => fetch(url).then(res => res.json()))
     
     return (

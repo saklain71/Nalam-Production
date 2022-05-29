@@ -2,7 +2,7 @@
 
 [NalamProduction Bd Ltd](https://nalam-tools.web.app/)
 
-## Feature of this website
+## Main List of this website
 
 * Landing page with navbar,heroSection,services,business summery,review,footer.
 
@@ -17,7 +17,7 @@
 * A 404 page if anything is not founded.
 
 
-## Technology used for this application
+## What Technology is used for this application
 
 * React.
 * Node js

@@ -14,7 +14,7 @@ const PurchagePage = () => {
 
     const id = useParams();
     //console.log(id.id);
-    const url = `http://localhost:5000/products/${id.id}`
+    const url = `https://still-taiga-05914.herokuapp.com/products/${id.id}`
     const { data: purchase, refetch } = useQuery("purchase", () => fetch(url).then(res => res.json()))
 
     const [quantityCount, setQuantityCount] = useState(10)
@@ -26,7 +26,7 @@ const PurchagePage = () => {
         const newQuantity = { quantity }
         const order = { email: data.email, productName: purchase?.name, price: price, quantity: data.quantity, phoneNumber: data.phone, address: data.address }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://still-taiga-05914.herokuapp.com/order', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -38,7 +38,7 @@ const PurchagePage = () => {
                 reset()
             })
 
-        const url = `http://localhost:5000/products/${id.id}`
+        const url = `https://still-taiga-05914.herokuapp.com/products/${id.id}`
         fetch(url, {
             method: "PATCH",
             headers: {

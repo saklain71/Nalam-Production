@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const email = user?.email
-    const url = `http://localhost:5000/order?email=${email}`
+    const url = `https://still-taiga-05914.herokuapp.com/order?email=${email}`
     const { data: myorders, refetch } = useQuery("myorders", () => fetch(url).then(res => res.json()))
     console.log(user , myorders)
     return (
