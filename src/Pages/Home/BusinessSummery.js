@@ -1,77 +1,49 @@
 import React from 'react';
+import backImage from '../../Images/footer.png'
+import { GiFlyingFlag } from 'react-icons/gi'
+import { AiOutlineFundProjectionScreen, AiOutlineUsergroupAdd, AiFillLike } from 'react-icons/ai'
 
 const BusinessSummery = () => {
+
     return (
-        <section className='mt-28 mb-28'>
-            <div class="stats shadow mb-14">
-
-                <div class="stat ">
-                    <div class="stat-title">Total Page Views</div>
-                    <div class="stat-value">89,400</div>
-                    <div class="stat-desc">21% more than last month</div>
+        <div style={{ backgroundImage: `url(${backImage})`, backgroundSize: 'cover' }}>
+            <h1 className='text-6xl text-info text-center font-serif my-16'>Business Summary</h1>
+            <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 place-items-center'>
+                <div className='my-6 flex flex-col justify-center items-center'>
+                    <GiFlyingFlag className='text-4xl  '></GiFlyingFlag>
+                    <h1 className='text-6xl text-info my-4'>89+</h1>
+                    <h3 className='text-info font-mono text-xl font-bold'>Country</h3>
                 </div>
-
-            </div>
-
-            <div class="stats shadow grid grid-cols-1">
-
-                <div class="stat">
-                    <div class="stat-figure text-info">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </div>
-                    <div class="stat-title">Total Likes</div>
-                    <div class="stat-value text-info">25.6K</div>
-                    <div class="stat-desc">21% more than last month</div>
+                <div className='my-6 flex flex-col justify-center items-center'>
+                    <AiOutlineFundProjectionScreen className='text-4xl  '></AiOutlineFundProjectionScreen>
+                    <h1 className='text-6xl text-info my-4'>554+</h1>
+                    <h3 className='text-info font-mono text-xl font-bold'>Complete projects</h3>
                 </div>
-
-                <div class="stat">
-                    <div class="stat-figure text-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <div class="stat-title">Page Views</div>
-                    <div class="stat-value text-secondary">2.6M</div>
-                    <div class="stat-desc">21% more than last month</div>
+                <div className='my-6 flex flex-col justify-center items-center'>
+                    <AiOutlineUsergroupAdd className='text-4xl '></AiOutlineUsergroupAdd>
+                    <h1 className='text-6xl text-info my-4'>444+</h1>
+                    <h3 className='text-info font-mono text-xl font-bold'>Happy client</h3>
                 </div>
-
-                <div class="stat">
-                    <div class="stat-figure text-secondary">
-                        <div class="avatar online">
-                            <div class="w-16 rounded-full">
-                                <img src="https://api.lorem.space/image/face?w=128&h=128" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="stat-value">86%</div>
-                    <div class="stat-title">Tasks done</div>
-                    <div class="stat-desc text-secondary">31 tasks remaining</div>
-                </div>
-
-
-            </div>
-            <div className='mt-28'>
-                <div class="stats bg-info text-primary-content">
-
-                    <div class="stat">
-                        <div class="stat-title">Account balance</div>
-                        <div class="stat-value">$89,400</div>
-                        <div class="stat-actions">
-                            <button class="btn btn-sm btn-success">Add funds</button>
-                        </div>
-                    </div>
-
-                    <div class="stat">
-                        <div class="stat-title">Current balance</div>
-                        <div class="stat-value">$89,400</div>
-                        <div class="stat-actions ">
-                            <button class="btn btn-sm">Withdrawal</button>
-                            <button class="btn btn-sm mx-1">deposit</button>
-                        </div>
-                    </div>
-
+                <div className='my-6 flex flex-col justify-center items-center'>
+                    <AiFillLike className='text-4xl  '></AiFillLike>
+                    <h1 className='text-6xl text-info my-4'>599+</h1>
+                    <h3 className='text-info font-mono text-xl font-bold'>Feedback</h3>
                 </div>
             </div>
-        </section>
+            <div className='flex items-center justify-around pb-6'>
+                <div>
+                    <h1 className='text-5xl text-info p-4 font-bold'>Do you have any question?</h1>
+                    <p className='text-lg font-bold px-4'>Don't hesitate to contact us</p>
+                </div>
+                <div>
+                    <button className='btn btn-info mx-2 sm:my-2 xs:my-2'> Request For Quote</button>
+                    <button className='btn btn-info xl:m-2'>Contact us</button>
+ 
+                </div>
+            </div>
+        </div>
     );
 };
+
 
 export default BusinessSummery;

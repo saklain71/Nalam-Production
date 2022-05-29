@@ -1,6 +1,7 @@
 
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
+import Carosel from './Carosel';
 import ContactForm from './ContactForm';
 
 import ProductsSection from './ProductsSection';
@@ -16,6 +17,8 @@ const Home = () => {
             <BusinessSummery></BusinessSummery>
             <ReviewSection></ReviewSection>
             <ContactForm></ContactForm>
+            <Carosel></Carosel>
+
         </div>
     );
 };

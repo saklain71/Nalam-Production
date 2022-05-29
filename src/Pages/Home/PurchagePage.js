@@ -12,14 +12,14 @@ const PurchagePage = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const id = useParams();
-    console.log(id.id);
+    //console.log(id.id);
     const url = `http://localhost:5000/products/${id.id}`
     const { data: purchase, refetch } = useQuery("purchase", () => fetch(url).then(res => res.json()))
 
     const [quantityCount, setQuantityCount] = useState(10)
     const [price, setPrice] = useState(1)
 
-    console.log(quantityCount, price)
+   // console.log(quantityCount, price)
     const onSubmit = data => {
         const quantity = purchase?.availableQuantity - data.quantity
         const newQuantity = { quantity }
