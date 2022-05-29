@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Blog from './Pages/Blog/Blog';
 import AddReview from './Pages/Dashboard/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
@@ -16,6 +15,9 @@ import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Payment from './Pages/Dashboard/Payment';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import Blog from './Pages/Blog/Blog';
+import About from './Pages/About/About';
 
 
 function App() {
@@ -40,9 +42,11 @@ function App() {
           <Route path="orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="alluser" element={<AllUsers></AllUsers>}></Route>
+          <Route path="manageOrder" element={<ManageOrders></ManageOrders>}></Route>
           <Route path="payment" element={<Payment></Payment>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
