@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const PurchagePage = () => {
@@ -33,7 +34,7 @@ const PurchagePage = () => {
             body: JSON.stringify(order)
         }).then(res => res.json())
             .then(data => {
-                toast.success("Order successfully taken")
+                toast("Order successfully taken")
                 reset()
             })
 

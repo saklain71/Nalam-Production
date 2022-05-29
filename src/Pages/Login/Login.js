@@ -6,8 +6,9 @@ import login from '../../Images/login.jpg'
 import google from '../../Images/google.png'
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../Shared/Loading';
-import { toast } from 'react-toastify';
+
 import UseToken from '../../Hooks/UseToken';
+import { toast } from 'react-toastify';
 const Login = () => {
     const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();

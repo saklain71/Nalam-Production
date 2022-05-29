@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddReview = () => {
     const [items, setItems] = useState();
-    //const [user] = useAuthState(auth);
 
     useEffect(() => {
         fetch('http://localhost:5000/review')
@@ -15,7 +15,6 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data, e) => {
-        console.log(data)
 
         e.target.reset();
 
@@ -27,7 +26,9 @@ const AddReview = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                toast('Your Review Added to Home');
+            })
     };
 
 
@@ -50,8 +51,19 @@ const AddReview = () => {
                                 })}
                             />
                             <input
+                                type="text"
+                                placeholder="Write Here"
+                                className="input input-bordered w-full max-w-xs mb-5"
+                                {...register("comment", {
+                                    required: {
+                                        value: true,
+                                        message: 'Write your Comment Please'
+                                    },
+                                })}
+                            />
+                            <input
                                 type="number"
-                                placeholder="Give pRatings Out of 5"
+                                placeholder="Give Ratings Out of 5"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("ratings", {
                                     required: {

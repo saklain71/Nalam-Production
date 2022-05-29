@@ -9,6 +9,7 @@ import PurchagePage from './Pages/Home/PurchagePage';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import NotFound from './Pages/Shared/NotFound';
@@ -62,7 +63,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer />
+      <ToastContainer/>
     </div>
   );
 }
